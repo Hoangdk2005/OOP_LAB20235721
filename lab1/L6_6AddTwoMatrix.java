@@ -1,6 +1,6 @@
 //6.6
 import java.util.Scanner;
-public class AddTwoMatrix {
+public class L6_6AddTwoMatrix {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
 

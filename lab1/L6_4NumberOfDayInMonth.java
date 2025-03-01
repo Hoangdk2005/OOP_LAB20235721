@@ -1,6 +1,6 @@
 //6.4
 import java.util.Scanner;
-public class NumberOfDayInMonth {
+public class L6_4NumberOfDayInMonth {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int year,month;

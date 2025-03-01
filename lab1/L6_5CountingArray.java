@@ -2,7 +2,7 @@
 import java.util.Scanner;
 import java.util.Arrays; //Gói có các hàm xử lý mảng
 
-public class CountingArray {
+public class L6_5CountingArray {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
 

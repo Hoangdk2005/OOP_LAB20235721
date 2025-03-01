@@ -1,7 +1,7 @@
 //2.2.6 - Part 2
 import java.util.Scanner;
 
-public class LinearEquationSolverTwoVariables {
+public class L2_2_6_bLinearEquationTwoVariables {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

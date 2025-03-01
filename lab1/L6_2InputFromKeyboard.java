@@ -1,6 +1,6 @@
 //6.2
 import java.util.Scanner;
-public class InputFromKeyboard {
+public class L6_2InputFromKeyboard {
     public static void main(String[] args){
         Scanner keyboard = new Scanner(System.in);
 

@@ -1,6 +1,6 @@
 //2.2.6 - Part 1
 import java.util.Scanner;
-public class LinearEquationOneVariable {
+public class L2_2_6_aLinearEquationOneVariable {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
 

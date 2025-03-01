@@ -1,6 +1,6 @@
 //6.3
 import java.util.Scanner;
-public class DisplayTriangle {
+public class L6_3DisplayTriangle {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
 
