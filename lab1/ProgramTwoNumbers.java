@@ -1,6 +1,7 @@
+//2.2.5
 import java.util.Scanner;
 
-public class Lab1_2_2_5 {
+public class ProgramTwoNumbers {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         double x,y;
