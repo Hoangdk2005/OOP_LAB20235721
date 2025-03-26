@@ -1,0 +1,17 @@
+Question1 : 
+- If you create a constructor method to build a DVD by title then create a constructor method to build
+a DVD by category. Does JAVA allow you to do this?
+Answer : Java có cho phép tạo nhiều constructor với cùng kiểu tham số không?
+ Java cho phép nhiều constructor trong cùng một lớp thông qua constructor overloading (nạp chồng constructor),Constructor overloading có nghĩa là bạn có thể tạo nhiều constructor trong một lớp, miễn là chúng có danh sách tham số khác nhau (khác về số lượng, kiểu dữ liệu hoặc thứ tự tham số).
+
+ Question 2:
+ - Is JAVA a Pass by Value or a Pass by Reference programming language?
+ Answer : Java là ngôn ngữ "Pass by Value" (Truyền tham trị), không phải "Pass by Reference" (Truyền tham chiếu).Pass by Value (Truyền tham trị) có nghĩa là khi bạn truyền một biến vào phương thức, một bản sao của giá trị đó được tạo ra và sử dụng trong phương thức, chứ không phải chính biến gốc.
+
+ Question 3: After the call of swap(jungleDVD, cinderellaDVD) why does the title ofthese two objects still remain? 
+ Answer : Sau khi thực hiện phương thức swap(jungleDVD, cinderellaDVD), tiêu đề của hai đối tượng vẫn giữ nguyên vì trong Java, tham số được truyền vào phương thức là giá trị của đối tượng;
+
+Question 4: After the call of changeTitle(jungleDVD, cinderellaDVD.getTitle()) why is the title of the JungleDVD changed? 
+Answer : Sau khi gọi changeTitle(jungleDVD, cinderellaDVD.getTitle()), tiêu đề của jungleDVD bị thay đổi vì trong phương thức changeTitle, ta thực hiện thay đổi trực tiếp trên đối tượng dvd (được truyền vào phương thức)bằng cách gọi dvd.setTitle(title). Điều này ảnh hưởng trực tiếp đến đối tượng gốc được truyền vào phương thức.
+
+
