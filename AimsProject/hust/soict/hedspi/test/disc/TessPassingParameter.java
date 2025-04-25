@@ -1,3 +1,7 @@
+package hust.soict.hedspi.test.disc;
+
+import hust.soict.hedspi.aims.cart.Cart;
+import hust.soict.hedspi.aims.media.DigitalVideoDisc;    
 public class TessPassingParameter {
     public static void main(String[] args) {
         DigitalVideoDisc jungleDVD = new DigitalVideoDisc("Jungle");
@@ -22,3 +26,4 @@ public class TessPassingParameter {
         dvd = new DigitalVideoDisc(oldTitle);
     }
 }
+
