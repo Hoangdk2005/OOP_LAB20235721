@@ -1,6 +1,5 @@
 {
     "java.project.sourcePaths": [
-        "ooplab/AimsProject",
-        "ooplab/OtherProjects/lab1"
+        "AimsProject/hust/soict/hedspi/aims/screen/manager"
     ]
 }
