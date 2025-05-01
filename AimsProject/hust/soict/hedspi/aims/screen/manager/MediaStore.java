@@ -1,3 +1,7 @@
+package hust.soict.hedspi.aims.screen.manager;
+import hust.soict.hedspi.aims.media.Media;  
+import hust.soict.hedspi.aims.media.Playable;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -13,10 +17,12 @@ public class MediaStore extends JPanel {
         this.add(cost);
 
         if (media instanceof Playable) {
+            
             JButton playButton = new JButton("Play");
             playButton.addActionListener(e -> {
+                ((Playable) media).play();
                 JOptionPane.showMessageDialog(this,
-                    ((Playable) media).play(), "Playing", JOptionPane.INFORMATION_MESSAGE);
+                    "Media is now playing.", "Playing", JOptionPane.INFORMATION_MESSAGE);
             });
             this.add(playButton);
         }

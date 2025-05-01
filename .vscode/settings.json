@@ -1,5 +1,5 @@
 {
-    "java.project.sourcePaths": [
-        "AimsProject/hust/soict/hedspi/aims/screen/manager"
-    ]
+    
+        "java.project.sourcePaths": ["AimsProject"] // hoặc ["AimsProject"] nếu bạn không có thư mục src }
+      
 }

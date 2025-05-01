@@ -1,3 +1,7 @@
+package hust.soict.hedspi.aims.screen.manager;
+import hust.soict.hedspi.aims.store.Store; // Giả định bạn đã có class Store
+import hust.soict.hedspi.aims.media.CompactDisc; // Giả định bạn đã có class CompactDisc
+
 import java.awt.*;
 import javax.swing.*;
 

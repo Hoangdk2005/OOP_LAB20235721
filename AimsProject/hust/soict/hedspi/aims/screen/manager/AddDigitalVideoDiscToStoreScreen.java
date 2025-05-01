@@ -1,3 +1,6 @@
+package hust.soict.hedspi.aims.screen.manager;
+import hust.soict.hedspi.aims.store.Store; // Giả định bạn đã có class Store
+
 import java.awt.*;    
 import javax.swing.*;    // Import các thư viện cần thiết
 

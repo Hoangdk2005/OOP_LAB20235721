@@ -1,6 +1,7 @@
+package hust.soict.hedspi.aims.screen.manager;
+import hust.soict.hedspi.aims.store.Store; // Giả định bạn đã có class Store
 
-import hust.soict.hedspi.aims.store;
-import hust.soict.hedspi.aims.media.Media;
+
 import javax.swing.*;
 import java.awt.*;
 public class StoreManagerScreen extends JFrame {
@@ -43,7 +44,7 @@ public class StoreManagerScreen extends JFrame {
         return header;
     }
 
-    // Tạo thanh menu như hình bạn gửi
+    
     JMenuBar createMenuBar() {
         JMenu menu = new JMenu("Options");
 
@@ -62,7 +63,7 @@ public class StoreManagerScreen extends JFrame {
         return menuBar;
     }
 
-    // Main test thử
+    
     public static void main(String[] args) {
         new StoreManagerScreen(new Store()); // Store giả định, bạn cần tạo class Store phù hợp
     }
