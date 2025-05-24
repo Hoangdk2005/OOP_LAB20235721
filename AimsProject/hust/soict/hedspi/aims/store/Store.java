@@ -12,6 +12,10 @@ public class Store {
 
     // Thêm media vào cửa hàng
     public void addMedia(Media media) {
+        if (media == null) {
+            System.err.println("Cannot add null media to store.");
+            return;
+        }
         if (!itemsInStore.contains(media)) {
             itemsInStore.add(media);
             System.out.println("Media \"" + media.getTitle() + "\" has been added to the store.");
@@ -22,9 +26,14 @@ public class Store {
 
     // Xoá media khỏi cửa hàng
     public void removeMedia(String title) {
+        if (title == null || title.trim().isEmpty()) {
+            System.err.println("Cannot remove media with null or empty title.");
+            return;
+        }
+        
         Media mediaToRemove = null;
         for (Media media : itemsInStore) {
-            if (media.getTitle().equalsIgnoreCase(title)) {
+            if (media.getTitle().equalsIgnoreCase(title.trim())) {
                 mediaToRemove = media;
                 break;
             }
@@ -39,8 +48,13 @@ public class Store {
 
     // Hiển thị danh sách media trong cửa hàng
     public void displayMediaDetails(String title) {
+        if (title == null || title.trim().isEmpty()) {
+            System.err.println("Cannot display details for null or empty title.");
+            return;
+        }
+        
         for (Media media : itemsInStore) {
-            if (media.getTitle().equalsIgnoreCase(title)) {
+            if (media.getTitle().equalsIgnoreCase(title.trim())) {
                 media.displayInfo();
                 return;
             }
@@ -48,8 +62,17 @@ public class Store {
         System.out.println("Media not found in store.");
     }
     public void addToCart(String title, Cart cart) {
+        if (title == null || title.trim().isEmpty()) {
+            System.err.println("Cannot add media with null or empty title to cart.");
+            return;
+        }
+        if (cart == null) {
+            System.err.println("Cannot add media to null cart.");
+            return;
+        }
+        
         for (Media media : itemsInStore) {
-            if (media.getTitle().equalsIgnoreCase(title)) {
+            if (media.getTitle().equalsIgnoreCase(title.trim())) {
                 cart.addMedia(media);
                 return;
             }
@@ -57,13 +80,28 @@ public class Store {
         System.out.println("Media not found in store.");
     }
     public void playMedia(String title) {
+        if (title == null || title.trim().isEmpty()) {
+            System.err.println("Cannot play media with null or empty title.");
+            return;
+        }
+        
         for (Media media : itemsInStore) {
-            if (media.getTitle().equalsIgnoreCase(title) && media instanceof Playable) {
-                ((Playable) media).play();
-                return;
+            if (media.getTitle().equalsIgnoreCase(title.trim())) {
+                if (media instanceof Playable) {
+                    try {
+                        ((Playable) media).play();
+                        return;
+                    } catch (Exception e) {
+                        System.err.println("Error playing media: " + e.getMessage());
+                        return;
+                    }
+                } else {
+                    System.out.println("Media is not playable.");
+                    return;
+                }
             }
         }
-        System.out.println("Playable media not found with title: " + title);
+        System.out.println("Media not found in store.");
     }
 
 

@@ -6,10 +6,17 @@ import java.util.Scanner;
 
 import hust.soict.hedspi.aims.media.Media;
 import hust.soict.hedspi.aims.media.Playable;
+import hust.soict.hedspi.aims.exception.PlayerException;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 public class Cart {
-    // Sử dụng ArrayList để lưu trữ các đối tượng Media
-    private ArrayList<Media> itemsOrdered = new ArrayList<Media>();
+    // Sử dụng ObservableList thay vì ArrayList
+    private ObservableList<Media> itemsOrdered = FXCollections.observableArrayList();
+    
+    public ObservableList<Media> getItemsOrdered() {
+        return itemsOrdered;
+    }
     
     public void addMedia(Media media) {
         if (!itemsOrdered.contains(media)) {  // Kiểm tra xem media đã tồn tại trong giỏ hàng chưa
@@ -50,8 +57,7 @@ public class Cart {
 
     // Tính tổng chi phí của tất cả các đối tượng trong giỏ hàng
     public float totalCost() {
-        float total = 0;
-        // Duyệt qua các đối tượng trong giỏ hàng và tính tổng chi phí
+        float total = 0.0f;
         for (Media media : itemsOrdered) {
             total += media.getCost();
         }
@@ -150,7 +156,12 @@ public void playMedia(String title) {
     for (Media media : itemsOrdered) {
         if (media.getTitle().equalsIgnoreCase(title)) {
             if (media instanceof Playable) {
-                ((Playable) media).play();  // Nếu media là Playable, gọi play
+                try {
+                    ((Playable) media).play();
+                    System.out.println("Playing media: " + title);
+                } catch (PlayerException e) {
+                    System.err.println("Error playing media: " + e.getMessage());
+                }
             } else {
                 System.out.println("This media cannot be played.");
             }

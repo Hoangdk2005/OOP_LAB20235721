@@ -12,6 +12,18 @@ public class Disc extends Media {
         this.length = length;
     }
 
+    public Disc(String title, String category, float cost) {
+        super(title);
+        this.director = "Unknown";
+        this.length = 0;
+    }
+
+    public Disc(String title) {
+        super(title);
+        this.director = "Unknown";
+        this.length = 0;
+    }
+
     // Getter cho length và director
     public int getLength() {
         return length;
@@ -40,5 +52,6 @@ public class Disc extends Media {
         System.out.println("Length: " + length + " minutes");
         System.out.println("Cost: " + getCost() + "$");
     }
+    
 }
 

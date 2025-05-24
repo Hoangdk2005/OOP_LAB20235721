@@ -15,6 +15,13 @@ public abstract class Media {
         this.cost = cost;
     }
 
+    public Media(String title) {
+        this.id = 0;
+        this.title = title;
+        this.category = "Unknown";
+        this.cost = 0.0f;
+    }
+
     public Media(int id, String title) {
         this.id = id;
         this.title = title;

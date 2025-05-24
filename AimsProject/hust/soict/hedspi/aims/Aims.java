@@ -80,7 +80,7 @@ public class Aims {
         ArrayList<String> authors = new ArrayList<>(); 
         authors.add("J.K. Rowling");
         store.addMedia(new Book(2, "Harry Potter", "Fantasy", 25.99f, authors));
-        CompactDisc cd1 = new CompactDisc(3, "The Best Hits", "Music", 14.99f, "John Doe", "Artist Name", 60);
+        CompactDisc cd1 = new CompactDisc(3, "The Best Hits", "Music", "John Doe", 14.99f, "Artist Name", 60);
         cd1.addTrack(new Track("Track 1", 3));
         cd1.addTrack(new Track("Track 2", 4));
         store.addMedia(cd1);
@@ -127,7 +127,7 @@ public class Aims {
     public static void storeMenu() {
         System.out.println("Options: ");
         System.out.println("--------------------------------");
-        System.out.println("1. See a media’s details");
+        System.out.println("1. See a media's details");
         System.out.println("2. Add a media to cart");
         System.out.println("3. Play a media");
         System.out.println("4. See current cart");
