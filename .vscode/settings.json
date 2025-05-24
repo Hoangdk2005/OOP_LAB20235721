@@ -1,6 +1,22 @@
 {
     "java.project.sourcePaths": [
         "ooplab/AimsProject",
-        "ooplab/OtherProjects/lab1"
+        "ooplab/OtherProjects/GUIPROJECT/hust/soict/hedspi/javafx",
+        "ooplab/OtherProjects/GUIPROJECT/src/main/java/hust/soict/hedspi/javafx"
+    ],
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "d:\\FileProgram\\javafx-sdk-24.0.1\\lib\\javafx.base.jar",
+        "d:\\FileProgram\\javafx-sdk-24.0.1\\lib\\javafx.controls.jar",
+        "d:\\FileProgram\\javafx-sdk-24.0.1\\lib\\javafx.fxml.jar",
+        "d:\\FileProgram\\javafx-sdk-24.0.1\\lib\\javafx.graphics.jar",
+        "d:\\FileProgram\\javafx-sdk-24.0.1\\lib\\javafx.media.jar",
+        "d:\\FileProgram\\javafx-sdk-24.0.1\\lib\\javafx.swing.jar",
+        "d:\\FileProgram\\javafx-sdk-24.0.1\\lib\\javafx.web.jar",
+        "d:\\FileProgram\\javafx-sdk-24.0.1\\lib\\javafx-swt.jar",
+        "d:\\FileProgram\\javafx-sdk-24.0.1\\lib\\jdk.jsobject.jar",
+        "d:\\FileProgram\\javafx-sdk-24.0.1\\lib\\jfx.incubator.input.jar",
+        "d:\\FileProgram\\javafx-sdk-24.0.1\\lib\\jfx.incubator.richtext - Copy.jar",
+        "d:\\FileProgram\\javafx-sdk-24.0.1\\lib\\jfx.incubator.richtext.jar"
     ]
 }
